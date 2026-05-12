@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Hanken Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Clinical Theme Palette */
+  --color-primary: #aecae2;
+  --color-primary-container: #0d2b3e;
+  --color-on-primary-container: #7893aa;
+  
+  --color-secondary: #4fdbc8;
+  --color-secondary-container: #04b4a2;
+  
+  --color-tertiary: #00dbe7;
+  --color-tertiary-container: #002e31;
+  
+  --color-background: #051424;
+  --color-surface: #051424;
+  --color-surface-container: #122131;
+  --color-surface-container-low: #0d1c2d;
+  --color-surface-container-high: #1c2b3c;
+  --color-surface-variant: #273647;
+  
+  --color-on-background: #d4e4fa;
+  --color-on-surface: #d4e4fa;
+  --color-on-surface-variant: #c3c7cd;
+  
+  --color-error: #ffb4ab;
+  --color-error-container: #93000a;
+}
+
+@layer base {
+  body {
+    @apply h-screen overflow-hidden text-on-background antialiased font-sans bg-background;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    background: rgba(13, 43, 62, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .glass-card {
+    @apply bg-surface-container-high/40 backdrop-blur-xl border border-white/5 rounded-xl transition-all hover:bg-surface-container-high/60;
+  }
+
+  .neon-border {
+    box-shadow: 0 0 15px rgba(0, 219, 231, 0.2);
+  }
+
+  .font-label {
+    @apply font-mono text-[10px] uppercase tracking-[0.1em] font-medium;
+  }
+
+  .glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl;
+  }
+}
