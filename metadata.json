@@ -1,6 +1,6 @@
 {
-  "name": "PRISM - IA de Gestión de PJI",
-  "description": "Sistema Inteligente de Monitoreo de Riesgo Periprotésico. Un ecosistema clínico para gestionar el riesgo de PJI utilizando el Índice de Riesgo Inflamatorio Extendido (EIRI) y el Consenso de Filadelfia.",
+  "name": "PRISM | Smart Orthopedics",
+  "description": "Plataforma de Inteligencia Artificial clínica para la prevención de infecciones periprotésicas (PJI) mediante el monitoreo dinámico de biomarcadores y protocolos de optimización quirúrgica.",
   "requestFramePermissions": [
     "camera",
     "microphone",

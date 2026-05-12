@@ -4,6 +4,7 @@
  */
 
 import React, { useState, useMemo, useEffect } from 'react';
+import { ItecLogo } from './components/ItecLogo';
 import { 
   Activity, 
   Clock, 
@@ -331,14 +332,14 @@ export default function App() {
     <div className="flex h-screen font-sans text-on-background overflow-hidden relative bg-background">
       {/* SideNavBar */}
       <aside className="hidden md:flex flex-col py-8 px-4 h-screen w-64 bg-surface-container-low border-r border-white/5 z-40">
-        <div className="mb-10 px-2 flex flex-col gap-2">
-          <div className="flex items-center gap-3">
-             <div className="w-10 h-10 bg-tertiary/10 rounded-lg flex items-center justify-center border border-tertiary/20">
-               <Activity className="text-tertiary" size={24} />
+        <div className="mb-10 px-2">
+          <div className="flex items-center gap-3 group cursor-pointer">
+             <div className="w-12 h-12 flex items-center justify-center transition-transform group-hover:scale-105">
+               <ItecLogo className="h-full w-full" />
              </div>
              <div>
-               <h1 className="font-headline text-xl font-bold text-tertiary leading-none">PJI-SMART</h1>
-               <p className="font-label text-on-surface-variant mt-1">Clinical AI Platform</p>
+               <h1 className="font-headline text-2xl font-black text-on-surface tracking-tighter leading-none">PRISM</h1>
+               <p className="text-[10px] text-on-surface-variant font-bold uppercase tracking-[0.2em] mt-1 leading-none">Powered by itec+</p>
              </div>
           </div>
         </div>
@@ -406,9 +407,13 @@ export default function App() {
             <span className="font-label">Ajustes</span>
           </button>
           <div className="mt-6 px-2">
-            <p className="text-[10px] text-on-surface-variant mb-2">Desarrollado por:</p>
-            <div className="flex items-center gap-2 opacity-70">
-              <div className="w-16 h-4 bg-white/10 rounded flex items-center justify-center font-black text-[8px] tracking-tighter text-on-surface-variant">LYNX</div>
+            <p className="text-[10px] text-on-surface-variant mb-3">En alianza con:</p>
+            <div className="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
+              <img 
+                src="/api/artifacts/45a32d27-2da9-4792-a016-db47d13993ff/76504227-234e-4f11-93e1-3141f22d5612" 
+                alt="LYNX Consulting" 
+                className="h-7 w-auto object-contain"
+              />
             </div>
           </div>
         </div>
@@ -418,7 +423,10 @@ export default function App() {
       <main className="flex-1 flex flex-col overflow-hidden relative">
         {/* TopAppBar */}
         <header className="flex justify-between items-center px-8 h-16 w-full bg-surface-container/80 backdrop-blur-xl border-b border-white/5 z-50">
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-4">
+            <div className="md:hidden w-8 h-8 flex items-center justify-center">
+              <ItecLogo className="h-full w-full" />
+            </div>
             <div className="flex flex-col">
               <span className="font-label text-on-surface-variant">
                 {activeTab === 'dashboard' ? 'Centro de Operaciones' : activeTab === 'economics' ? 'Análisis Financiero' : 'Caso de Paciente'}
@@ -444,7 +452,7 @@ export default function App() {
               <Bell size={20} />
             </button>
             <div className="flex items-center gap-3 pl-4 border-l border-white/10">
-              <span className="hidden md:block font-label text-on-surface">Dr. Martinez</span>
+              <span className="hidden md:block font-label text-on-surface">Dr. Acevedo</span>
               <div className="w-8 h-8 rounded-full bg-primary-container border border-primary/20 flex items-center justify-center">
                 <User size={18} className="text-primary" />
               </div>
